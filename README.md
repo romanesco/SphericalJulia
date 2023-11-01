@@ -7,10 +7,10 @@ Developed with Unity 2022.3.5f1
 
 The image at the top left is the parameter space and the Julia set for the chosen parameter is drawn on the sphere.
 
-Choose parameter: Click the parameter image
-Explore parameter space: Mouse scroll to translate, shift key + mouse scroll to zoom in/out
-Rotate the sphere: Drag anywhere outside the image and the sliders
-Sliders: Change number of iterations
+- Choose parameter: Click the parameter image
+- Explore parameter space: Mouse scroll to translate, shift key + mouse scroll to zoom in/out
+- Rotate the sphere: Drag anywhere outside the image and the sliders
+- Sliders: Change number of iterations
 
 ## Scenes
 
