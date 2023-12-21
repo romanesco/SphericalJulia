@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 public class PickParameter : MonoBehaviour
 {
@@ -22,18 +24,20 @@ public class PickParameter : MonoBehaviour
     {
         if (child == null) { return; }
 
-        var mouse = Mouse.current;
-        if (mouse == null) { return; }
-       
-        if (mouse.leftButton.isPressed)
+        var uiInputModule = (InputSystemUIInputModule) EventSystem.current.currentInputModule;
+        if  (uiInputModule == null) { return; }
+
+        if ( uiInputModule.leftClick.action.IsPressed() )
         {
-            // Debug.Log(Input.mousePosition);
-            Vector2 localPos = transform.InverseTransformPoint(Input.mousePosition);
+            Vector2 localPos = transform.InverseTransformPoint(uiInputModule.point.action.ReadValue<Vector2>());
+                        
             var rect = GetComponent<RectTransform>().rect;
+            //Vector2 pixelUV = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
             Vector2 pixelUV = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
-
+            //Debug.Log(pixelUV);
+            
             if ( (pixelUV.x < 0) || (pixelUV.x > 1) || (pixelUV.y <0) || (pixelUV.y>1) ) { return; }
-
+            
             Material material = GetComponent<Image>().material;
             float xmin = material.GetFloat("_XMin");
             float xmax = material.GetFloat("_XMax");

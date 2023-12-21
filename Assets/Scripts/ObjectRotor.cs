@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.EnhancedTouch;
 
 public class ObjectRotor : MonoBehaviour
 {
     [SerializeField] GameObject rotateObject;
-    public float mouseSensitivity = 0.1f;
-    public float swipeSensitivity = 0.1f;
+    //public float mouseSensitivity = 0.1f;
+    //public float swipeSensitivity = 0.1f;
+    public float sensitivity = 0.1f;
 
     //Matrix4x4 rot = Matrix4x4.identity;
 
@@ -41,8 +43,9 @@ public class ObjectRotor : MonoBehaviour
     }
 
     Vector2 oldMousePos;
-    bool is4DRotationWithMouse = false;
-
+    Vector2 oldPos;
+    
+    bool isPressedOutsideUI = false;
     bool isMousePressedOutsideUI = false;
     bool isTouchOutsideUI = false;
 
@@ -51,6 +54,28 @@ public class ObjectRotor : MonoBehaviour
     {
         Matrix4x4 deltaRot = Matrix4x4.identity;
 
+        var uiInputModule = (InputSystemUIInputModule) EventSystem.current.currentInputModule;
+        if  (uiInputModule == null) { return; }
+
+        if (uiInputModule.leftClick.action.IsPressed()) {
+            Vector2 pos = uiInputModule.point.action.ReadValue<Vector2>();
+            if (!uiInputModule.leftClick.action.WasPressedThisFrame())
+            {
+                if (isPressedOutsideUI)
+                {
+                    Vector2 deltaPos = pos - oldPos;
+                    deltaRot = drot(deltaPos * sensitivity);
+                }
+            }
+            else
+            {
+                isPressedOutsideUI = !EventSystem.current.IsPointerOverGameObject();
+                Debug.Log("Pressed.  Outside UI pressed: " + isPressedOutsideUI );
+            }
+            oldPos = pos;
+        }
+
+        /*
         var mouse = Mouse.current;
         if (mouse != null)
         {
@@ -104,6 +129,7 @@ public class ObjectRotor : MonoBehaviour
                 deltaRot = drot(dv) * deltaRot;
             }
         }
+        */
 
         if (rotateObject != null)
         {
