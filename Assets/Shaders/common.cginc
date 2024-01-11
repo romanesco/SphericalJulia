@@ -1,10 +1,20 @@
-#define PI 3.14159265
+#define PI 3.14159265359
 
+// Stereographic projection from normal vector (more accurate)
+float2 n2cpx(float3 n)
+{
+    n = normalize(n);
+    float mag = 1/(1-n.y);
+    return float2(n.x*mag, n.z*mag);
+}
+
+// Stereographic projection from UV coordinate
+// Do not use this because UV coordinate on the sphere is not accurate (especially near poles)
 float2 uv2cpx(float2 uv)
 {
     float t = uv.y*PI;
-    float s = uv.x*2*PI;
-    return float2(cos(s),sin(s))*tan((PI-t)/2);
+    float s = uv.x*2.0*PI;
+    return float2(cos(s),sin(s))*tan((PI-t)/2.0);
 }
 
 float2 norm(float2 z)
