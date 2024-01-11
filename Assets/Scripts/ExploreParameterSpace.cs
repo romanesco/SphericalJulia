@@ -32,7 +32,7 @@ public class ExploreParameterSpace : MonoBehaviour
         if ((pixelUV.x < 0) || (pixelUV.x > 1) || (pixelUV.y < 0) || (pixelUV.y > 1)) { return; }
 
         Vector2 scroll = mouse.scroll.ReadValue();
-        scroll.y = -scroll.y;
+        // scroll.y = -scroll.y;
 
         if (scroll.magnitude > 0.1f)
         {

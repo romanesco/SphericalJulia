@@ -43,7 +43,7 @@ public class PickParameter : MonoBehaviour
             float xmax = material.GetFloat("_XMax");
             float ymin = material.GetFloat("_YMin");
             float ymax = material.GetFloat("_YMax");
-            Vector2 c = new Vector2(xmin + pixelUV.x * (xmax - xmin), ymin + pixelUV.y * (ymax - ymin));
+            Vector2 c = new Vector2(xmin + pixelUV.x * (xmax - xmin), ymax - pixelUV.y * (ymax - ymin));
 
             Material cmaterial = child.GetComponent<Renderer>().sharedMaterial;
             // cmaterial.SetFloat("_CRe", c.x);

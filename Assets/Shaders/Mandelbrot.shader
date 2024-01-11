@@ -70,7 +70,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 float x = _XMin*(1-i.uv.x) + _XMax*i.uv.x;
-                float y = _YMin*i.uv.y + _YMax*(1-i.uv.y);
+                float y = _YMin*(1-i.uv.y) + _YMax*i.uv.y;
                 float2 c = float2(x,y);
         		int n = Mandelbrot(c);
 		        
