@@ -77,6 +77,7 @@
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float3 normal : NORMAL;
             };
 
             struct v2f
@@ -85,7 +86,8 @@
                 float4 pos : SV_POSITION;
                 SHADOW_COORDS(1)
                 fixed3 diff : COLOR0;
-                fixed3 ambient : COLOR1;                
+                fixed3 ambient : COLOR1;     
+                float3 normal : NORMAL;           
             };
 
             v2f vert (appdata_base v)
@@ -93,6 +95,7 @@
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.uv = v.texcoord;
+                o.normal = v.normal;
 
                 half3 worldNormal = UnityObjectToWorldNormal(v.normal);
                 half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
@@ -106,7 +109,8 @@
             
             fixed4 frag (v2f i) : SV_Target
             {
-        		float2 z = uv2cpx(i.uv);
+                float2 z = n2cpx(i.normal);
+        		// float2 z = uv2cpx(i.uv);
                 float2 c = float2(_X, _Y);
         		int n = Julia(z,c);
              
