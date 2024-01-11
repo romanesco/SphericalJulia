@@ -34,7 +34,7 @@ public class PickParameter : MonoBehaviour
             var rect = GetComponent<RectTransform>().rect;
             //Vector2 pixelUV = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
             Vector2 pixelUV = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
-            //Debug.Log(pixelUV);
+            // Debug.Log("Pick parameter: " + pixelUV);
             
             if ( (pixelUV.x < 0) || (pixelUV.x > 1) || (pixelUV.y <0) || (pixelUV.y>1) ) { return; }
             

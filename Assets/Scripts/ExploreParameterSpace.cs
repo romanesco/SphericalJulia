@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
 public class ExploreParameterSpace : MonoBehaviour
@@ -19,11 +20,14 @@ public class ExploreParameterSpace : MonoBehaviour
         GetComponent<Image>().material = material;
     }
 
-
+    
     // Update is called once per frame
     void Update()
     {
+        // mouse controls
         var mouse = Mouse.current;
+        if (mouse == null) return;
+
         Vector2 localPos = transform.InverseTransformPoint(Input.mousePosition);
         var rect = GetComponent<RectTransform>().rect;
         Vector2 pixelUV = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
@@ -68,8 +72,87 @@ public class ExploreParameterSpace : MonoBehaviour
                 material.SetFloat("_YMin", y0 + dy);
                 material.SetFloat("_YMax", y1 + dy);
             }
-
-
         }
     }
+
+    void LateUpdate() {
+        OnTwoFingerSwipe();    
+    }
+
+    private TouchState _touchState0;
+    private TouchState _touchState1;
+    public void OnTouch0(InputAction.CallbackContext context) {
+        _touchState0 = context.ReadValue<TouchState>();
+        // Debug.Log("Primary Touch position: " + _touchState0.position );
+        // OnTwoFingerSwipe();
+    }
+    
+    public void OnTouch1(InputAction.CallbackContext context) {
+        _touchState1 = context.ReadValue<TouchState>();
+        // Debug.Log("Primary Touch position: " + _touchState0.position );
+        //OnTwoFingerSwipe();
+    }
+
+    private void OnTwoFingerSwipe() {
+        
+        bool twoTouchState = ( (_touchState0.phase == UnityEngine.InputSystem.TouchPhase.Moved) && (_touchState1.isInProgress) || 
+                             ( (_touchState0.isInProgress) && (_touchState1.phase == UnityEngine.InputSystem.TouchPhase.Moved) ) );
+        
+        var pickParameter = this.GetComponent<PickParameter>();
+        if (!twoTouchState ) 
+        {
+            if (pickParameter != null) { pickParameter.enabled = true; }
+            return;
+        }
+
+        pickParameter.enabled = false;
+
+        Vector2 pos0 = _touchState0.position;
+        Vector2 pos1 = _touchState1.position;
+        Vector2 oldPos0 = pos0 - _touchState0.delta;
+        Vector2 oldPos1 = pos1 - _touchState1.delta;
+
+
+        Vector2 mid = (pos0+pos1)/2;
+        Vector2 oldMid = (oldPos0+oldPos1)/2;
+        float scale = Mathf.Sqrt( (oldPos0-oldPos1).magnitude/(pos0-pos1).magnitude );
+
+        var rect = GetComponent<RectTransform>().rect;
+        Vector2 localPos = transform.InverseTransformPoint(pos0);
+        Vector2 pixelUV0 = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
+
+        if ((pixelUV0.x < 0) || (pixelUV0.x > 1) || (pixelUV0.y < 0) || (pixelUV0.y > 1) ) return;
+
+        localPos = transform.InverseTransformPoint(pos1);
+        Vector2 pixelUV1 = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
+
+        if ( (pixelUV1.x < 0) || (pixelUV1.x > 1) || (pixelUV1.y < 0) || (pixelUV1.y > 1) ) return;
+
+        localPos = transform.InverseTransformPoint(mid);
+        Vector2 pixelUVMid = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
+
+        localPos = transform.InverseTransformPoint(oldMid);
+        Vector2 pixelUVOldMid = new Vector2(localPos.x / rect.width, -localPos.y / rect.height);
+
+        float x0 = material.GetFloat("_XMin"),
+              x1 = material.GetFloat("_XMax"),
+              y0 = material.GetFloat("_YMin"),
+              y1 = material.GetFloat("_YMax");
+            
+        Vector2 center = new Vector2(x0*(1-pixelUVOldMid.x) + x1*pixelUVOldMid.x, 
+                                     y0*pixelUVOldMid.y + y1*(1-pixelUVOldMid.y));
+
+        float xscale = scale*(x1-x0), yscale = scale*(y1-y0);
+        float X0 = xscale*(-pixelUVMid.x) + center.x,
+              Y0 = yscale*(pixelUVMid.y-1) + center.y,
+              X1 = X0 + xscale, Y1 = Y0 + yscale;
+
+        material.SetFloat("_XMin", X0);
+        material.SetFloat("_XMax", X1);
+        material.SetFloat("_YMin", Y0);
+        material.SetFloat("_YMax", Y1);
+
+    }
+
 }
+

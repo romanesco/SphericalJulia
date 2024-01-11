@@ -7,10 +7,10 @@
 {
     Properties
     {
-        _XMin("X min", float) = -2
-        _XMax("X max", float) = 1
-        _YMin("Y min", float) = -1.5
-        _YMax("Y max", float) = 1.5
+        _XMin("X min", float) = -1.8
+        _XMax("X max", float) = 0.4
+        _YMin("Y min", float) = -1.1
+        _YMax("Y max", float) = 1.1
         _Iteration("Max Iteration", Int) = 100
     }
     SubShader
