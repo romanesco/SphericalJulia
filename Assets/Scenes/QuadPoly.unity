@@ -925,10 +925,6 @@ MonoBehaviour:
     m_ActionId: 58c61bb5-04ef-4cf8-9ae9-34a31b1c9cd8
     m_ActionName: UI/PrimaryFingerPosition
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0c6024c9-4a98-4d9d-9fc5-acaa5c1fd083
-    m_ActionName: UI/SecondaryTouchContact
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 583359090}
         m_TargetAssemblyTypeName: ExploreParameterSpace, Assembly-CSharp

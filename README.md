@@ -1,4 +1,5 @@
 # SphericalJulia
+
 Explore Julia sets on the Riemann sphere
 
 Developed with Unity 2022.3.5f1
@@ -7,9 +8,12 @@ Developed with Unity 2022.3.5f1
 
 The image at the top left is the parameter space and the Julia set for the chosen parameter is drawn on the sphere.
 
-- Choose parameter: Click the parameter image
-- Explore parameter space: Mouse scroll to translate, shift key + mouse scroll to zoom in/out
-- Rotate the sphere: Drag anywhere outside the image and the sliders
+- Choose parameter: Click/Tap the parameter image
+- Explore parameter space:
+    - Translate: Mouse scroll/Two finger swipe
+    - Zoom in/out: Shift key + mouse scroll/Two finger pinch
+- Rotate the sphere: Drag/swipe anywhere outside the UI (the parameter image and the sliders)
+- Move/zoom the sphere (AR only): Two finger swipe/pinch outside the UI
 - Sliders: Change number of iterations
 
 ## Scenes

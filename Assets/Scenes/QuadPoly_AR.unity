@@ -1480,12 +1480,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1316133700}
+        m_TargetAssemblyTypeName: ObjectMover, Assembly-CSharp
+        m_MethodName: OnTouch0
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 58c61bb5-04ef-4cf8-9ae9-34a31b1c9cd8
     m_ActionName: UI/PrimaryFingerPosition
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 583359090}
         m_TargetAssemblyTypeName: ExploreParameterSpace, Assembly-CSharp
+        m_MethodName: OnTouch1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1316133700}
+        m_TargetAssemblyTypeName: ObjectMover, Assembly-CSharp
         m_MethodName: OnTouch1
         m_Mode: 0
         m_Arguments:
@@ -2127,6 +2151,7 @@ GameObject:
   - component: {fileID: 1316133694}
   - component: {fileID: 1316133698}
   - component: {fileID: 1316133699}
+  - component: {fileID: 1316133700}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -2248,6 +2273,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dynamicsObject: {fileID: 0}
   forImage: 0
+--- !u!114 &1316133700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316133693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f6f22fd0bcd4771b017293ad3657d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateObject: {fileID: 0}
 --- !u!1 &1331985566
 GameObject:
   m_ObjectHideFlags: 0
