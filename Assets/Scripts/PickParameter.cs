@@ -17,6 +17,14 @@ public class PickParameter : MonoBehaviour
     {
         // duplicate the material of the child
         var material = child.GetComponent<Renderer>().material;
+        
+        float x = material.GetFloat("_X");
+        float y = material.GetFloat("_Y");
+
+        if (parameterDisplay != null)
+        {
+            parameterDisplay.text = "Parameter: " + new Vector2(x,y).ToString("F6");
+        }
     }
 
     // Update is called once per frame
