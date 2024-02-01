@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class SceneChooserGUI : MonoBehaviour
 {
@@ -13,33 +14,43 @@ public class SceneChooserGUI : MonoBehaviour
         new string[] {"RealRat2", "Real quadratic rational maps"}
     };
 
+    GUIStyle style;
+
     void Start()
     {
-        // create 
+        // create list of descriptions
         descriptions = new string[sceneList.Length];
         for (int i=0; i<sceneList.Length; i++)
         {
             descriptions[i] = sceneList[i][1];
         }
 
+        style = new GUIStyle();
+        style.fontSize = 100;
     }
     bool showChooserDialog = false;
 
     void OnGUI() {
-        if (GUI.Button(new Rect(Screen.width - 180, Screen.height-50,150,30), "Change function")) 
+        GUI.skin.button.fontSize = 32;
+        GUI.skin.box.fontSize = 40;
+
+        if (GUI.Button(new Rect(Screen.width - 320, Screen.height-80,300,60), "Change function")) 
         {
             showChooserDialog = true;
         }
 
         if (showChooserDialog) {
-            GUI.BeginGroup (new Rect (Screen.width / 2 - 200, Screen.height / 2 - 200, 400, 400));
+            int w = 800, h = 600;
+            GUI.BeginGroup (new Rect (Screen.width / 2 - w/2, Screen.height / 2 - h/2, w, h));
         
-            GUI.Box (new Rect (0,0,400,400), "Choose function");
+            //GUI.Box (new Rect (0,0,w,50), "Choose function", style);
             //GUI.Button (new Rect (10,40,80,30), "Click me");
-            GUILayout.BeginVertical("Box");
-            selGridInt = GUILayout.SelectionGrid(selGridInt, descriptions, 1);
+            GUILayout.BeginVertical("Box", GUILayout.Width(w));
+            GUILayout.Box("Choose function");
+            selGridInt = GUILayout.SelectionGrid(selGridInt, descriptions, 1, GUILayout.Height(200));
+            GUILayout.Space(28);
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Change function"))
+            if (GUILayout.Button("Change function", GUILayout.Height(100)))
             {
                 string nextSceneName = sceneList[selGridInt][0];
                 string sceneName = SceneManager.GetActiveScene().name;
@@ -50,7 +61,7 @@ public class SceneChooserGUI : MonoBehaviour
                 Debug.Log("You chose " + nextSceneName);
                 SceneManager.LoadScene(nextSceneName);
             }
-            if (GUILayout.Button("Cancel")) 
+            if (GUILayout.Button("Cancel",GUILayout.Height(100)))
             {
                 showChooserDialog = false;
             }
