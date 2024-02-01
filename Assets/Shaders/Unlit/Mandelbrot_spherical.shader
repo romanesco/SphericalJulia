@@ -18,7 +18,7 @@
 
             int _MaxIteration;
 
-            #include "common.cginc"
+            #include "../common.cginc"
 
             float2 f(float2 z, float2 c)
             {

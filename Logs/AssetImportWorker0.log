@@ -7200,3 +7200,321 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3075.231473 seconds.
+  path: Assets/Shaders/QuadPoly_Julia_spherical.shader
+  artifactKey: Guid(83a710faa7d1c46f59e8812aa0947be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/QuadPoly_Julia_spherical.shader using Guid(83a710faa7d1c46f59e8812aa0947be8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b50cddc73ec28aaf7e51c86cc39dbb56') in 0.007038 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.166457 seconds.
+  path: Assets/Shaders/QuadRatJulia_spherical.shader
+  artifactKey: Guid(047c89edafd5249e6a5527889fd1153c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/QuadRatJulia_spherical.shader using Guid(047c89edafd5249e6a5527889fd1153c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ac76ef6c671627d91c0c26904a6950') in 0.000457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 58.056563 seconds.
+  path: Assets/Shaders/QuadRatS2_Julia_spherical.shader
+  artifactKey: Guid(ffa355689c4454a9a8f83fb0aee549cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/QuadRatS2_Julia_spherical.shader using Guid(ffa355689c4454a9a8f83fb0aee549cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c76337330481c45d1cc7fb87fd3771d') in 0.000463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 468.944693 seconds.
+  path: Assets/Shaders/param1.cginc
+  artifactKey: Guid(96f2d7281453a4c368836f9baee61e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/param1.cginc using Guid(96f2d7281453a4c368836f9baee61e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defe5372c8dd32a56c02df4b2cf6d545') in 0.000708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 83.256726 seconds.
+  path: Assets/Shaders/testParam.shader
+  artifactKey: Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/testParam.shader using Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '986de247f71a93bb56b135dc38eb8994') in 0.000776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 113.175043 seconds.
+  path: Assets/Shaders/param1.cginc
+  artifactKey: Guid(96f2d7281453a4c368836f9baee61e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/param1.cginc using Guid(96f2d7281453a4c368836f9baee61e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608cfbd1ccc2fd77e73039753a639a7d') in 0.000636 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16bf23000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.309 seconds
+Refreshing native plugins compatible for Editor in 1.93 ms, found 5 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.030 seconds
+Domain Reload Profiling: 1339ms
+	BeginReloadAssembly (99ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (160ms)
+		LoadAssemblies (179ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1030ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (318ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (215ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2.57 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4989 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.4 MB). Loaded Objects now: 5864.
+Memory consumption went from 0.85 GB to 0.85 GB.
+Total: 3.315750 ms (FindLiveObjects: 0.191083 ms CreateObjectMapping: 0.062667 ms MarkObjects: 2.505125 ms  DeleteObjects: 0.556208 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 43b350a4d6e6d1791af0b5038c4bea17 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 92.896028 seconds.
+  path: Assets/Shaders/param.cginc
+  artifactKey: Guid(b56407f4f0fea4d2dbbbe50840ef6919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/param.cginc using Guid(b56407f4f0fea4d2dbbbe50840ef6919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f79ee74a41135fc838addebfa5112f') in 0.008090 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 213.281405 seconds.
+  path: Assets/Shaders/RationalJulia.cginc
+  artifactKey: Guid(ae7e8307c37dc481b890e8850d0e48fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/RationalJulia.cginc using Guid(ae7e8307c37dc481b890e8850d0e48fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e96a2bea70bba87b12b912b1b1c4f9') in 0.000683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2.578974 seconds.
+  path: Assets/Shaders/testRationalJulia.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/testRationalJulia.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd246fee932dfa6943f6088ff38b95e') in 0.001008 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 5.654767 seconds.
+  path: Assets/Shaders/testRationalJulia_Spherical.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/testRationalJulia_Spherical.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3e6608a32d6d8a8a79cbf13bc31593') in 0.000818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.986866 seconds.
+  path: Assets/Shaders/testRationalJulia_spherical.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/testRationalJulia_spherical.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd83bd3ba0ba356891491e0c8e7cdd0cb') in 0.000835 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16bf23000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.291 seconds
+Refreshing native plugins compatible for Editor in 1.80 ms, found 5 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.927 seconds
+Domain Reload Profiling: 1218ms
+	BeginReloadAssembly (96ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (146ms)
+		LoadAssemblies (161ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (927ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (303ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (24ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (202ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2.60 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4990 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 5868.
+Memory consumption went from 0.86 GB to 0.86 GB.
+Total: 3.280000 ms (FindLiveObjects: 0.182833 ms CreateObjectMapping: 0.060959 ms MarkObjects: 2.428416 ms  DeleteObjects: 0.607166 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 43b350a4d6e6d1791af0b5038c4bea17 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 87.871498 seconds.
+  path: Assets/Shaders/SampleRationalJulia_spherical.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SampleRationalJulia_spherical.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '658d870a8571f782ce8a2a60f3b1d739') in 0.008067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2.945317 seconds.
+  path: Assets/Shaders/testParam.shader
+  artifactKey: Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/testParam.shader using Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d259ca4534305d2b324f8aaa9743c37') in 0.000887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 2.885883 seconds.
+  path: Assets/Shaders/SampleParam.shader
+  artifactKey: Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SampleParam.shader using Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091d77deff97fb2c0e7f44c9bbd38cc7') in 0.000773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 141.211035 seconds.
+  path: Assets/Shaders/test.cginc
+  artifactKey: Guid(3f0829f216e85479baf693399ecec671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/test.cginc using Guid(3f0829f216e85479baf693399ecec671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b565c22567b1c130c3719c8efccc85f8') in 0.001061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.556797 seconds.
+  path: Assets/Shaders/SampleRationalJulia_spherical.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SampleRationalJulia_spherical.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bedf4b53800a4e0ab9bd39ea67d25c4') in 0.000995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 5.128341 seconds.
+  path: Assets/Shaders/RationalJulia2.cginc
+  artifactKey: Guid(ae7e8307c37dc481b890e8850d0e48fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/RationalJulia2.cginc using Guid(ae7e8307c37dc481b890e8850d0e48fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f6ebf095e6ea4bdc6d89d6905247d6') in 0.000560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 7.065522 seconds.
+  path: Assets/Shaders/RationalJulia1.cginc
+  artifactKey: Guid(3f0829f216e85479baf693399ecec671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/RationalJulia1.cginc using Guid(3f0829f216e85479baf693399ecec671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0a5bb11e28a8f698af93e73df379562') in 0.000543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 71.010507 seconds.
+  path: Assets/Shaders/SampleRationalJulia_spherical.shader
+  artifactKey: Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SampleRationalJulia_spherical.shader using Guid(94591024d1236456598c09ea793b4e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c560dfb97e46ca1e68e7343de3f6f068') in 0.000827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 38.781343 seconds.
+  path: Assets/Shaders/SampleParam.shader
+  artifactKey: Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/SampleParam.shader using Guid(993213247a43e41f1a378e761f969f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ca823f09e1e8fd44ab1bd917f9af2a') in 0.000787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 208.641461 seconds.
+  path: Assets/Shaders/ParameterSpace.cginc
+  artifactKey: Guid(b56407f4f0fea4d2dbbbe50840ef6919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/ParameterSpace.cginc using Guid(b56407f4f0fea4d2dbbbe50840ef6919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba069b5cddb2b27611efa181872f991e') in 0.000577 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
