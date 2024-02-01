@@ -8,6 +8,7 @@
         _BIm("Imag(b)", float) = 0
         _PreIteration("PreIteration", Int) = 25
         _Iteration("Iteration", Int) = 10
+        _MaxIteration("Max Iteration bound", Int) = 100
     }
 
     SubShader

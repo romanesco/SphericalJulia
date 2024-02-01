@@ -42,7 +42,10 @@ public class SetIterations : MonoBehaviour
         // reset iterations
         if (sliderIteration != null) {
             int i = material.GetInt("_Iteration");
+            int iMax = material.GetInt("_MaxIteration");
             sliderIteration.value = i;
+            sliderIteration.maxValue = iMax;
+            Debug.Log("Set iteration to " + i + " and max iteration bound to " + iMax);
         }
         
         if (sliderPreIteration != null) {
@@ -50,7 +53,9 @@ public class SetIterations : MonoBehaviour
                 //sliderPreIteration.enabled = true;
                 sliderPreIteration.gameObject.SetActive(true);
                 int pi = material.GetInt("_PreIteration");
+                int piMax = material.GetInt("_MaxPreIteration");
                 sliderPreIteration.value = pi;
+                sliderPreIteration.maxValue = piMax;
             } else {
                 // sliderPreIteration.enabled = false;
                 sliderPreIteration.gameObject.SetActive(false);

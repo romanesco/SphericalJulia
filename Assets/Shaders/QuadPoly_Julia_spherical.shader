@@ -4,7 +4,10 @@
     {
         _X("Real(c)", float) = 0
         _Y("Imag(c)", float) = 1
-        _Iteration("Max Iteration", Int) = 100
+        _Iteration("Iteration", Int) = 100
+        _MaxIteration("Max Iteration bound", Int) = 1000
+
+        
     }
     SubShader
     {

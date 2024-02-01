@@ -13,7 +13,8 @@
         _YMin("Y min", float) = -2
         _YMax("Y max", float) = 2
         _Eps("epsilon", float) = 0.01
-        _Iteration("Max Iteration", Int) = 100
+        _Iteration("Iteration", Int) = 100
+        _MaxIteration("Max Iteration bound", Int) = 1000
     }
     SubShader
     {
