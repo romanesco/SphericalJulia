@@ -112,17 +112,26 @@
             {
                 float2 z = n2cpx(i.normal);
         		//float2 z = uv2cpx(i.uv);
-                float2 c = float2(_X, _Y);
-        		int n = Julia(z,c);
-             
-                while (n < 0)
-                {
-                    n += 256;
-                }
-                fixed col1 = ((uint) n % 256)/255.0;
-                //fixed4 col = fixed4(col1,col1,1,1);
-                fixed4 col = tex2D(_Gradient, float2(col1, 0));
+                float r2 = z.x*z.x+z.y*z.y;
+                fixed4 col;
 
+                // show poles 
+                if ( (r2 > 100000) || (r2 < 0.00001) ) {
+                     col = fixed4(1,1,1,1); // white dot
+                    // return fixed4(0,0,0,1); // black dot
+                } else {
+                    float2 c = float2(_X, _Y);
+                    int n = Julia(z,c);
+                
+                    while (n < 0)
+                    {
+                        n += 256;
+                    }
+                    fixed col1 = ((uint) n % 256)/255.0;
+                    //fixed4 col = fixed4(col1,col1,1,1);
+                    col = tex2D(_Gradient, float2(col1, 0));
+                }
+                
                 // シャドウの減衰を計算します (1.0 = 完全に照射される, 0.0 = 完全に影になる)
                 fixed shadow = SHADOW_ATTENUATION(i);
                 // シャドウでライトの照明を暗くします。アンビエントをそのまま保ちます

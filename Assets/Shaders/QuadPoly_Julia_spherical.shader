@@ -91,19 +91,21 @@
                 float2 z = n2cpx(i.normal);
                 float r2 = z.x*z.x+z.y*z.y;
                 float2 c = float2(_X, _Y);
-        		int n = Julia(z,c);
-		        
-                fixed col1 = ((uint) n % 256)/255.0;
-                fixed4 col = fixed4(col1,col1,1,1);
+                fixed4 col;
 
                 // show poles 
                 if ( (r2 > 100000) || (r2 < 0.00001) ) {
                     col = fixed4(1,1,1,1);
-                } else if (n < 0)
-                {
-                    return fixed4(0,0,0,1);
-                }
+                } else {
+        		    int n = Julia(z,c);
+		        
+                    fixed col1 = ((uint) n % 256)/255.0;
+                    col = fixed4(col1,col1,1,1);
 
+                    if (n < 0) {
+                        return fixed4(0,0,0,1);
+                    }
+                }
 
                 // シャドウの減衰を計算します (1.0 = 完全に照射される, 0.0 = 完全に影になる)
                 fixed shadow = SHADOW_ATTENUATION(i);

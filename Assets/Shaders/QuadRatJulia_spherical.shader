@@ -103,16 +103,25 @@
             {
                 float2 z = n2cpx(i.normal);
         		//float2 z = uv2cpx(i.uv);
-                float2 a = float2(_ARe, _AIm);
-                float2 b = float2(_BRe, _BIm);
-        		int n = Julia(z,a,b);
-             
-                while (n < 0)
-                {
-                    n += 256;
+                float r2 = z.x*z.x + z.y*z.y;
+                float4 col;
+
+                // show poles 
+                if ( (r2 > 100000) || (r2 < 0.00001) ) {
+                    //col = fixed4(1,1,1,1);
+                    return fixed4(0,0,0,1);
+                } else {
+                    float2 a = float2(_ARe, _AIm);
+                    float2 b = float2(_BRe, _BIm);
+                    int n = Julia(z,a,b);
+                
+                    while (n < 0)
+                    {
+                        n += 256;
+                    }
+                    fixed col1 = ((uint) n % 256)/255.0;
+                    col = fixed4(col1,col1,1,1);
                 }
-                fixed col1 = ((uint) n % 256)/255.0;
-                fixed4 col = fixed4(col1,col1,1,1);
 
                 // シャドウの減衰を計算します (1.0 = 完全に照射される, 0.0 = 完全に影になる)
                 fixed shadow = SHADOW_ATTENUATION(i);
