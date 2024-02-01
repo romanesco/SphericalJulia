@@ -10,6 +10,12 @@ public class ExploreParameterSpace : MonoBehaviour
     public float scrollSpeed = 5;
     public float zoomSpeed = 5;
 
+#if UNITY_WEBGL
+    float speedscale = 0.001f*0.003f;
+#else
+    float speedscale = 0.001f;
+#endif
+
     Material material;
 
     // Start is called before the first frame update
@@ -55,7 +61,7 @@ public class ExploreParameterSpace : MonoBehaviour
             if (Keyboard.current.shiftKey.isPressed)
             {
                 // shift key + vertical scroll to zoom
-                float magnitude = Mathf.Exp(scroll.y * zoomSpeed * 0.001f);
+                float magnitude = Mathf.Exp(scroll.y * zoomSpeed * speedscale);
                 Vector2 center = new Vector2(pixelUV.x * width + x0, pixelUV.y * height + y0);
                 Vector2 v0 = new Vector2(x0, y0), v1 = new Vector2(x1, y1);
                 v0 = (v0 - center) * magnitude + center;
@@ -67,7 +73,7 @@ public class ExploreParameterSpace : MonoBehaviour
             }
             else
             {
-                scroll *= scrollSpeed * 0.001f;
+                scroll *= scrollSpeed * speedscale;
 
                 float dx = width * scroll.x,
                     dy = height * scroll.y;
