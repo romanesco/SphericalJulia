@@ -6,7 +6,7 @@
         _XMax("X max", float) = 0.75
         _YMin("Y min", float) = -1.5
         _YMax("Y max", float) = 1.5
-        _Iteration("Max Iteration", Int) = 100
+        _Iteration("Iteration", Int) = 100
         _Gradient("Texture", 2D) = "red" {}
  
     }

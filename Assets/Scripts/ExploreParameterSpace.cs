@@ -20,6 +20,10 @@ public class ExploreParameterSpace : MonoBehaviour
         GetComponent<Image>().material = material;
     }
 
+    public void Reset()
+    {
+        material = GetComponent<Image>().material;
+    }
     
     // Update is called once per frame
     void Update()

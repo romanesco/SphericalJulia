@@ -3,7 +3,7 @@
     Properties
     {
         _X("x", float) = -0.5
-        _Y("y", float) = 0
+        _Y("y", float) = 0.5
        _PreIteration("PreIteration", Int) = 30
         _Iteration("Iteration", Int) = 20
         _Gradient("Texture", 2D) = "red" {}

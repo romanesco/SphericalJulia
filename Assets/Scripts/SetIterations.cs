@@ -8,6 +8,9 @@ public class SetIterations : MonoBehaviour
     public GameObject dynamicsObject;
     public bool forImage = false;
 
+    public Slider sliderIteration;
+    public Slider sliderPreIteration;
+
     Material material;
 
     private void Start()
@@ -16,31 +19,52 @@ public class SetIterations : MonoBehaviour
         {
             dynamicsObject = gameObject;
         }
+        material = GetMaterial();
+    }
+
+    Material GetMaterial()
+    {
+        if (forImage)
+        {
+            return dynamicsObject.GetComponent<Image>().material;
+        }
+        else
+        {
+            return dynamicsObject.GetComponent<MeshRenderer>().sharedMaterial;
+        }
+    }
+
+    public void Reset() 
+    {
+        // reset material
+        material = GetMaterial();
+        
+        // reset iterations
+        if (sliderIteration != null) {
+            int i = material.GetInt("_Iteration");
+            sliderIteration.value = i;
+        }
+        
+        if (sliderPreIteration != null) {
+            if (material.shader.FindPropertyIndex("_PreIteration") != -1) {
+                //sliderPreIteration.enabled = true;
+                sliderPreIteration.gameObject.SetActive(true);
+                int pi = material.GetInt("_PreIteration");
+                sliderPreIteration.value = pi;
+            } else {
+                // sliderPreIteration.enabled = false;
+                sliderPreIteration.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void SetIteration(float i)
     {
-        if (forImage)
-        {
-            material = dynamicsObject.GetComponent<Image>().material;
-        }
-        else
-        {
-            material = dynamicsObject.GetComponent<MeshRenderer>().sharedMaterial;
-        }
         material.SetInt("_Iteration", (int) i);
     }
 
     public void SetPreIterations(float i)
     {
-        if (forImage)
-        {
-            material = dynamicsObject.GetComponent<Image>().material;
-        }
-        else
-        {
-            material = dynamicsObject.GetComponent<MeshRenderer>().sharedMaterial;
-        }
         material.SetInt("_PreIteration", (int) i);
     }
 }

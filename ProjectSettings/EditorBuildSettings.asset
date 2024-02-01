@@ -5,24 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QuadPoly.unity
     guid: 2bbea781c057f49fdb61c7800d4c5647
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QuadPoly_AR.unity
     guid: b5da7c5b529d344ea9952c2bda2e9187
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rat2Per2.unity
     guid: 12d0a48a332a346fe8bf0c96cdad8e7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rat2Per2_AR.unity
     guid: dd23b4a9c09d847ff8cc938c9978ea17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RealRat2.unity
     guid: 405a50d632a104f63bb0fd398c6b03c6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RealRat2_AR.unity
     guid: 3afda9d969bd243adae2496318116edf
+  - enabled: 1
+    path: Assets/Scenes/SphericalJulia_AR.unity
+    guid: dd7359847c7ff4cdf9ec32d328469900
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7a2c9d85ee59c4aefb120a6a5ca2876a, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 259c95d3679144962a2c5df1e6dd7b1b, type: 2}

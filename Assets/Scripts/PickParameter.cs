@@ -12,19 +12,37 @@ public class PickParameter : MonoBehaviour
     public GameObject child = null;
     public TextMeshProUGUI parameterDisplay;
 
+    Material material;
+    Material cmaterial;
     // Start is called before the first frame update
     void Start()
     {
+        material = GetComponent<Image>().material;
+
         // duplicate the material of the child
-        var material = child.GetComponent<Renderer>().material;
-        
-        float x = material.GetFloat("_X");
-        float y = material.GetFloat("_Y");
+        cmaterial = child.GetComponent<Renderer>().material;
+
+        SetParameterText();
+    }
+
+    public void Reset() 
+    {
+        material = GetComponent<Image>().material;
+        cmaterial = child.GetComponent<Renderer>().sharedMaterial;
+
+        SetParameterText();
+    }
+    
+    void SetParameterText() 
+    {
+        float x = cmaterial.GetFloat("_X");
+        float y = cmaterial.GetFloat("_Y");
 
         if (parameterDisplay != null)
         {
             parameterDisplay.text = "Parameter: " + new Vector2(x,y).ToString("F6");
         }
+
     }
 
     // Update is called once per frame
@@ -46,14 +64,12 @@ public class PickParameter : MonoBehaviour
             
             if ( (pixelUV.x < 0) || (pixelUV.x > 1) || (pixelUV.y <0) || (pixelUV.y>1) ) { return; }
             
-            Material material = GetComponent<Image>().material;
             float xmin = material.GetFloat("_XMin");
             float xmax = material.GetFloat("_XMax");
             float ymin = material.GetFloat("_YMin");
             float ymax = material.GetFloat("_YMax");
             Vector2 c = new Vector2(xmin + pixelUV.x * (xmax - xmin), ymax - pixelUV.y * (ymax - ymin));
 
-            Material cmaterial = child.GetComponent<Renderer>().sharedMaterial;
             // cmaterial.SetFloat("_CRe", c.x);
             // cmaterial.SetFloat("_CIm", c.y);
             cmaterial.SetFloat("_X", c.x);
