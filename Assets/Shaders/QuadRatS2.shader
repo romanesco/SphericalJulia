@@ -13,7 +13,7 @@
         _YMax("Y max", float) = 1.1
         _Iteration("Iteration", Int) = 100
         _MaxIteration("Max Iteration bound", Int) = 1000
-        _Gradient("Texture", 2D) = "red" {}
+        [MainTexture] _Gradient("Texture", 2D) = "red" {}
     }
     SubShader
     {

@@ -1,4 +1,5 @@
 #define PI 3.14159265359
+#define ONE float2(1,0)
 
 // Stereographic projection from normal vector (more accurate)
 float2 n2cpx(float3 n)

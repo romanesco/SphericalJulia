@@ -8,7 +8,7 @@ Shader "Custom/Spherical/SampleRationalJulia"
         _MaxPreIteration("Max PreIteration bound", Int) = 100
         _Iteration("Iteration", Int) = 20
         _MaxIteration("Max Iteration bound", Int) = 100
-        _Gradient("Texture", 2D) = "red" {}
+        [MainTexture] _Gradient("Texture", 2D) = "red" {}
     }
 
     SubShader

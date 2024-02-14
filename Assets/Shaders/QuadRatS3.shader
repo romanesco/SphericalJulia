@@ -10,7 +10,7 @@ Shader "Custom/QuadraticRational-S_3"
         _YMax("Y max", float) = 7.5
         _Iteration("Max Iteration", Int) = 100
         _MaxIteration("Max Iteration bound", Int) = 1000
-        _Gradient("Texture", 2D) = "red" {}
+        [MainTexture] _Gradient("Texture", 2D) = "red" {}
     }
     SubShader
     {
