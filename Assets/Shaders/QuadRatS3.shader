@@ -1,13 +1,16 @@
-Shader "Custom/SampleParameterSpace"
+// Quadratic rational maps with period 3 critical point 0 -> ∞ (critical) -> 1 -> 0
+// (z-c)*(z-1)/z^2
+Shader "Custom/QuadraticRational-S_3"
 {
     Properties
     {
-        _XMin("X min", float) = -1.8
-        _XMax("X max", float) = 0.4
-        _YMin("Y min", float) = -1.1
-        _YMax("Y max", float) = 1.1
+        _XMin("X min", float) = -5
+        _XMax("X max", float) = 10
+        _YMin("Y min", float) = -7.5
+        _YMax("Y max", float) = 7.5
         _Iteration("Max Iteration", Int) = 100
         _MaxIteration("Max Iteration bound", Int) = 1000
+
     }
     SubShader
     {
@@ -29,18 +32,19 @@ Shader "Custom/SampleParameterSpace"
  
             float2 f(float2 z, float2 c)
             {
-                z = cpx_mult(z,z-float2(1,0));
-                return cpx_div(c/4,z);
+                float2 z2 = cpx_mult(z,z);
+                z = cpx_mult(z-c,z-float2(1,0));
+                return cpx_div(z,z2);
             }
 
             int iter(float2 c)
             {
-                float2 z = float2(0.5,0);
-                c = c;
+                // critical point: 2c/(c+1)                                
+                float2 z = cpx_div(2*c,c+float2(1,0));
 
                 for (int n=0; n<_Iteration; n++)
                 {
-                    if ( (z.x*z.x+z.y*z.y) > 100 )
+                    if ( (z.x*z.x+z.y*z.y) < 0.0001 )
                     {
                         return n;
                     }

@@ -1,6 +1,6 @@
 ﻿/*
  * Real Quadratic rational map (by Hironaka et al.) with x → 0 (cp) → ∞ → y
- * z -> (z-a)*(z-r)/z^2 with r=(1-x-y)/(1-x)
+ * z -> (z-x)*(z-r)/z^2 with r=(1-x-y)/(1-x)
  * (parameter space)
  */
 
