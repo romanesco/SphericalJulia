@@ -90,10 +90,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _X: 4.3
+    - _X: -8
     - _XMax: 1
     - _XMin: -2
-    - _Y: 0
+    - _Y: 8
     - _YMax: 1.5
     - _YMin: -1.5
     - _ZWrite: 1
