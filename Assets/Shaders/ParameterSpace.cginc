@@ -29,7 +29,7 @@
                 {
                     return fixed4(0,0,0,1);
                 }
-                n = n*4;
-                fixed col = ((uint) n % 256)/255.0;
-                return fixed4(1,col,col,1);
+                fixed col1 = ((uint) n % 256)/255.0;
+                fixed4 col = tex2D(_Gradient, float2(col1, 0));
+                return col;
             }

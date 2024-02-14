@@ -10,7 +10,7 @@ Shader "Custom/QuadraticRational-S_3"
         _YMax("Y max", float) = 7.5
         _Iteration("Max Iteration", Int) = 100
         _MaxIteration("Max Iteration bound", Int) = 1000
-
+        _Gradient("Texture", 2D) = "red" {}
     }
     SubShader
     {
@@ -27,6 +27,7 @@ Shader "Custom/QuadraticRational-S_3"
 
             float _XMin, _XMax, _YMin, _YMax;
             int _Iteration;
+            sampler2D _Gradient;
 
             #include "common.cginc"
  
@@ -46,7 +47,7 @@ Shader "Custom/QuadraticRational-S_3"
                 {
                     if ( (z.x*z.x+z.y*z.y) < 0.0001 )
                     {
-                        return n;
+                        return n*2 + (n % 3)*85;
                     }
                     z = f(z,c);
                 }
