@@ -510,16 +510,19 @@ MonoBehaviour:
   - Quadatic polynomials
   - Quadratic rational maps with period 2 critical point
   - Quadratic rational maps with period 3 critical point
+  - Quadratic rational maps with period 4 critical point
   - Real quadratic rational maps
   parameterMaterials:
   - {fileID: 2100000, guid: 9aefac38933f64a068b0325feff8ee40, type: 2}
   - {fileID: 2100000, guid: 43178e002295142759a1c417e064175f, type: 2}
   - {fileID: 2100000, guid: 8f9fa9838f0a04edf91549ed7d884461, type: 2}
+  - {fileID: 2100000, guid: 2fc2b8d11f58042f3839973e0c1b7fe3, type: 2}
   - {fileID: 2100000, guid: b87f106cdb02a4b358a1d1adbf44fb26, type: 2}
   sphereMaterials:
   - {fileID: 2100000, guid: dfc7b84d7294a4bb984d7f3445fd5847, type: 2}
   - {fileID: 2100000, guid: 8f11e673bfb194b23bf95cb4e4b554e7, type: 2}
   - {fileID: 2100000, guid: e47487e7de7da4a8ba5a7b83e15955a1, type: 2}
+  - {fileID: 2100000, guid: b2057a86e7a7f45c7992a5e23e77b8ad, type: 2}
   - {fileID: 2100000, guid: da0a919f0e7994e56a8de5bcc92c4265, type: 2}
 --- !u!4 &252894703
 Transform:
