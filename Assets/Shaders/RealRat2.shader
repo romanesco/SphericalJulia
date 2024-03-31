@@ -14,7 +14,8 @@
         _YMax("Y max", float) = 2
         _Eps("epsilon", float) = 0.01
         _Iteration("Iteration", Int) = 100
-        [MainTexture] _MaxIteration("Max Iteration bound", Int) = 1000
+        _MaxIteration("Max Iteration bound", Int) = 1000
+        [MainTexture] _Gradient("Texture", 2D) = "red" {}
     }
     SubShader
     {
@@ -31,6 +32,7 @@
             float _XMin, _XMax, _YMin, _YMax;
             float _Eps;
             int _Iteration;
+            sampler2D _Gradient;
 
             #include "common.cginc"
 
@@ -91,8 +93,11 @@
                     return fixed4(0,0,0,1);
                 }
                 n = n*4;
-                fixed col = ((uint) n % 256)/255.0;
-                return fixed4(1,col,col,1);
+                // fixed col = ((uint) n % 256)/255.0;
+                // return fixed4(1,col,col,1);
+                fixed col1 = ((uint) n % 256)/255.0;
+                fixed4 col = tex2D(_Gradient, float2(col1, 0));
+                return col;
             }
         
             ENDCG
