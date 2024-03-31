@@ -52,7 +52,7 @@ Shader "Custom/QuadraticRational-S_4"
  
                 for (int n=0; n<_Iteration; n++)
                 {
-                    if ( (z.x*z.x+z.y*z.y) > 100000 )
+                    if ( (z.x*z.x+z.y*z.y) < 0.00001 )
                     {
                         return n + (n && 3)*64;
                     }

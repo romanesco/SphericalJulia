@@ -48,7 +48,7 @@ public class FamilyChooser : MonoBehaviour
         
             GUILayout.BeginVertical("Box", GUILayout.Width(w));
             GUILayout.Box("Choose family");
-            selGridInt = GUILayout.SelectionGrid(selGridInt, descriptions, 1, GUILayout.Height(200));
+            selGridInt = GUILayout.SelectionGrid(selGridInt, descriptions, 1, GUILayout.Height(300));
             GUILayout.Space(28);
             GUILayout.BeginHorizontal();
             if (GUILayout.Button("Change family", GUILayout.Height(100)))
